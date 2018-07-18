@@ -1,0 +1,21 @@
+<form [formGroup]='reqform' (ngSubmit)='submit()'>
+  <div>
+    <label for="">Required Group</label>
+    <input type="text" name='requiredGroup' formControlName='reqGroup'>
+    <!--div *ngIf='reqform.controls.reqGroup.invalid'>Bad</div--> 
+  </div>
+  <div>
+      <label for="">Required Date</label>
+      <input type="date" name='reqDate' formControlName='date'>
+  </div>
+  <div>
+      <label for="">Request Hospital</label>
+      <input type="text" name='hospital' formControlName='hospital'>
+  </div>
+  <div>
+      <label for="">Units</label>
+      <input type="number" name='unit' formControlName='unit'>
+  </div>
+  <input type='submit' value='Request'>
+</form>
+{{this.reqform.value | json}}

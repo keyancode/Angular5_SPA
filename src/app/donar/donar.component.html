@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Blood Group</th>
+    <th>More Info</th>
+  </tr>
+  <tr *ngFor="let eachDonar of donarList">
+      <td>{{eachDonar.name}}</td>
+      <td>{{eachDonar.location}}</td>
+      <td>{{eachDonar.bloodGroup}}</td>
+      <td><a [routerLink]="['/donar',eachDonar.id]" class="btn-link">show More</a></td>
+  </tr>
+</table>
+
+{{reqid}}
